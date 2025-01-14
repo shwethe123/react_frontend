@@ -51,6 +51,23 @@ export default function GoutAllTable() {
         )
     });
 
+    const searchTodo = () => {
+        const searchFilter = data.filter((todo) => {
+            const ag = todo.ag ? todo.ag.toString().toUpperCase() : '';
+            const name = todo.name ? todo.name.toString().toUpperCase() : '';
+            const location = todo.location ? todo.location.toString().toUpperCase() : '';
+    
+            const searchTermUpper = searchTerm.toUpperCase();
+    
+            return ag.includes(searchTermUpper) || 
+                   name.includes(searchTermUpper) || 
+                   location.includes(searchTermUpper);
+        });
+    
+        setData(searchFilter);
+    }
+    
+
     const openCreate = () => { 
         setIsOpenCreate(!isOpenCreate);
     };
@@ -84,14 +101,14 @@ export default function GoutAllTable() {
             <div className='flex-1'>
                 <div className='flex justify-between'>
                     <h1 className="text-3xl font-bold mb-6">User Management</h1>
-                    <button onClick={openCreate} className="bg-blue-500 hover:bg-blue-700 text-white font-bold h-10 py-2 px-4 rounded-full">Add</button>
+                    <button onClick={openCreate} className="bg-blue-600 hover:bg-blue-500 text-white font-bold h-10 py-2 px-4 rounded-full">+ Add</button>
                 </div>
-                <div className='flex space-x-4'>
+                <div className='flex space-x-4 items-center'>
                     <select
                         id='location'
                         value={fillterLocation}
                         onChange={(e) => setFillterLocation(e.target.value)}
-                        className="block w-full rounded-sm bg-white px-3 py-2 text-base text-gray-500 outline outline-1 outline-blue-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:outline-blue-400 sm:text-sm mb-4"
+                        className="block w-full rounded-sm bg-white px-3 py-2 text-base text-gray-500 outline outline-1 outline-blue-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:outline-blue-400 sm:text-sm"
                     >
                         <option value="">All</option>
                         <option value="ဆိုင်(၁)">ဆိုင်(၁)</option>
@@ -103,8 +120,9 @@ export default function GoutAllTable() {
                         placeholder='Search'
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="block w-full rounded-sm bg-white px-3 py-2 text-base text-gray-500 outline outline-1 outline-blue-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:outline-blue-400 sm:text-sm mb-4"
+                        className="block w-full rounded-sm bg-white px-3 py-2 text-base text-gray-500 outline outline-1 outline-blue-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:outline-blue-400 sm:text-sm"
                     />
+                    <button className='bg-blue-600 rounded-lg m-2 p-2 text-white hover:bg-blue-500' onClick={searchTodo}>Search</button>
                 </div>
                 <form action="" className="pt-6 h-5/6 bg-white rounded-lg pb-2 shadow-md">
                     <div style={{ maxHeight: '680px', overflow: 'auto'}}>

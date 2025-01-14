@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Condition() {
   const [gOutData, setGOutData] = useState([]);
-  const [selectedCondition, setSelectedCondition] = useState("condition1"); // Change this as needed
+  const [selectedCondition, setSelectedCondition] = useState("အလုပ်နောက်ကျ"); // Change this as needed
   const [selectedCondition1, setSelectedCondition1] = useState("condition1");
 
   useEffect(() => {
@@ -16,6 +16,7 @@ export default function Condition() {
           car_order,
           chack,
           response_g,
+          order_in_one,
           order_in_two,
           outjuty,
           response_sale_in,
@@ -41,6 +42,7 @@ export default function Condition() {
             fetch('https://dashboard-yfuz.onrender.com/api/car_order'),
             fetch('https://dashboard-yfuz.onrender.com/api/chack'),
             fetch('https://dashboard-yfuz.onrender.com/api/dashboard'),
+            fetch('https://dashboard-yfuz.onrender.com/api/order_in'),
             fetch('https://dashboard-yfuz.onrender.com/api/order_in_two'),
             fetch('https://dashboard-yfuz.onrender.com/api/outjuty'),
             fetch('https://dashboard-yfuz.onrender.com/api/sales_in'),
@@ -80,6 +82,7 @@ export default function Condition() {
         const data_car_order = await car_order.json();
         const data_chack = await chack.json();
         const data_g = await response_g.json();
+        const data_order_in_one = await order_in_one.json();
         const data_order_in_two = await order_in_two.json();
         const data_outjuty = await outjuty.json();
         const data_sale_in = await response_sale_in.json();
@@ -104,7 +107,7 @@ export default function Condition() {
 
         const combinedData = [
           ...data_accouting, ...data_audit, ...data_car_order, ...data_chack,
-          ...data_g, ...data_order_in_two, ...data_outjuty,
+          ...data_g, ...data_order_in_one, ...data_order_in_two, ...data_outjuty,
           ...data_sale_in, ...data_sale_out, ...data_cashier_two, ...data_car_go2,
           ...data_Car_order2, ...data_G_out2, ...data_Order_in2, ...data_sale_in2,
           ...data_Sale_out2, ...data_Accounting3, ...data_Car_go3, ...data_Car_order3,

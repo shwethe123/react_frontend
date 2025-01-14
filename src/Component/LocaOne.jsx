@@ -75,8 +75,8 @@ export default function LocaOne() {
           <div className='grid grid-cols-[repeat(auto-fit,_minmax(140px,_2fr))] pt-2 text-xs'>
             <div className='grid grid-cols-[repeat(auto-fit,_minmax(60px,_2fr))] p-8 text-xs bg-white shadow-xl'>
                 <div><G_out2/></div>
-                <div><Sale_in2/></div>
                 <div><Sale_out2/></div>
+                <div><Sale_in2/></div>
                 <div><Order_in2/></div>
                 <div><Car_order2/></div>
                 <div><CarGo_loca2/></div>
@@ -85,8 +85,8 @@ export default function LocaOne() {
           </div>
           <div className='grid grid-cols-[repeat(auto-fit,_minmax(16px,_2fr))] p-8 text-xs bg-white shadow-xl'>
                 <div><G_out3/></div>
-                <div><Sale_in3/></div>
                 <div><Sale_out3/></div>
+                <div><Sale_in3/></div>
                 <div><Car_order3/></div>
                 <div><Accounting3/></div>
             </div>

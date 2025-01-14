@@ -209,38 +209,38 @@ export default function Sale_out3_edit() {
                     />
                 </div>
                 <div className='flex justify-between items-center'>
-                <label htmlFor="">Condition</label>
-                <select
-                    id="condition"
-                    className="border-2 w-80 border-sky-200 p-2 m-2 focus:outline-none focus:ring-1 shadow-sm focus:ring-sky-200"
-                    value={condition}
-                    onChange={(e) => setCondition(e.target.value)}
-                >
-                    <option value="us">Normal</option>
-                    <option value="condition1">အလုပ်နောက်ကျ</option>
-                    <option value="condition2">ခွင့် တစ်ပိုင်း</option>
-                    <option value="condition3">ခွင့် တစ်ရက်</option>
-                    <option value="condition4">ခွင့်ရက်ရှည်</option>
-                    <option value="condition5">ခွင့်မဲ့</option>
-                    <option value="condition6">ဖိုင်း အပြစ်ပေး</option>
-                    <option value="condition7">အလုပ်ထွက်မည့်သူ</option>
-                    <option value="condition8">အလုပ်ထွက်သူ</option>
-                    <option value="condition9">ကြိုတင်ခွင့်တိုင်သူ</option>
-                </select>
+                    <label htmlFor="">Condition</label>
+                    <select
+                        id="condition"
+                        className="border-2 w-80 border-sky-200 p-2 m-2 focus:outline-none focus:ring-1 shadow-sm focus:ring-sky-200"
+                        value={condition}
+                        onChange={(e) => setCondition(e.target.value)}
+                    >
+                        <option value="Normal">Normal</option>
+                        <option value="အလုပ်နောက်ကျ">အလုပ်နောက်ကျ</option>
+                        <option value="ခွင့်တစ်ပိုင်း">ခွင့်တစ်ပိုင်း</option>
+                        <option value="ခွင့်တစ်ရက်">ခွင့်တစ်ရက်</option>
+                        <option value="ခွင့်ရက်ရှည်">ခွင့်ရက်ရှည်</option>
+                        <option value="ခွင့်မဲ့">ခွင့်မဲ့</option>
+                        <option value="ဖိုင်းအပြစ်ပေး">ဖိုင်းအပြစ်ပေး</option>
+                        <option value="အလုပ်ထွက်မည့်သူ">အလုပ်ထွက်မည့်သူ</option>
+                        <option value="အလုပ်ထွက်သူ">အလုပ်ထွက်သူ</option>
+                        <option value="ကြိုတင်ခွင့်တိုင်သူ">ကြိုတင်ခွင့်တိုင်သူ</option>
+                    </select>
                 </div>
                 <div className='flex justify-between items-center'>
-                <label htmlFor="">ဌာနတည်နေရာ</label>
+                    <label htmlFor="">ဌာနတည်နေရာ</label>
                     <select
                         className='border-2 w-80 border-sky-200 p-2 m-2 focus:outline-none focus:ring-1 shadow-sm focus:ring-sky-200'
                         type="text"
                         value={selection}
                         onChange={(e) => setSelection(e.target.value)}
                     >
-                        <option value="us">Normal</option>
+                        <option value="Normal">Normal</option>
                         <option value="Gထွက်">Gထွက်</option>
                         <option value="လက်လီ">လက်လီ</option>
                         <option value="လက်ကား">လက်ကား</option>
-                        <option value="ကားအောင်">ကားအောင်</option>
+                        <option value="ကားအော်ဒါ">ကားအော်ဒါ</option>
                         <option value="အဝင်ပိုင်း">အဝင်ပိုင်း</option>
                         <option value="ပစ္စည်းမှာ">ပစ္စည်းမှာ</option>
                         <option value="စာရင်းကိုင်">စာရင်းကိုင်</option>

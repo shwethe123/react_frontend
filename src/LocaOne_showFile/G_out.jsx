@@ -38,17 +38,17 @@ export default function G_out() {
                   
                 <Link to={`/G_edit/Edit/${item._id}`}>
                   <p className={`
-                      rounded-md m-1 hover:bg-gray-100
-                        ${item.condition === 'condition1' ? 'bg-orange-300 border-l-4 border-indigo-500 ...' : ''} 
-                        ${item.condition === 'condition2' ? 'bg-green-200 border-l-4 border-green-600 ...' : ''} 
-                        ${item.condition === 'condition3' ? 'bg-green-500 border-l-4 border-green-800 ... text-white' : ''} 
-                        ${item.condition === 'condition4' ? 'bg-green-700 border-spacing-4 border-red-300... text-white' : ''} 
-                        ${item.condition === 'condition5' ? 'bg-red-500 text-white' : ''} 
-                        ${item.condition === 'condition6' ? 'bg-red-400 border-l-4 border-red-600 ... text-white' : ''}
-                        ${item.condition === 'condition7' ? 'bg-gray-700 border-l-4 border-black ... text-white' : ''}
-                        ${item.condition === 'condition8' ? 'bg-black text-white' : ''} 
-                        ${item.condition === 'condition9' ? 'bg-sky-100 border-l-4 border-green-600 text-black' : ''} '}
-                      p-2 cursor-pointer font-bold
+                        rounded-md m-1
+                            ${item.condition === 'အလုပ်နောက်ကျ' ? 'bg-orange-300 border-l-4 border-indigo-500 ...' : ''} 
+                            ${item.condition === 'ခွင့်တစ်ပိုင်း' ? 'bg-green-200 border-l-4 border-green-600 ...' : ''} 
+                            ${item.condition === 'ခွင့်တစ်ရက်' ? 'bg-green-500 border-l-4 border-green-800 ... text-white' : ''} 
+                            ${item.condition === 'ခွင့်ရက်ရှည်' ? 'bg-green-700 border-spacing-4 border-red-300... text-white' : ''} 
+                            ${item.condition === 'ခွင့်မဲ့' ? 'bg-red-500 text-white' : ''} 
+                            ${item.condition === 'ဖိုင်းအပြစ်ပေး' ? 'bg-red-400 border-l-4 border-red-600 ... text-white' : ''}
+                            ${item.condition === 'အလုပ်ထွက်မည့်သူ' ? 'bg-gray-700 border-l-4 border-black ... text-white' : ''}
+                            ${item.condition === 'အလုပ်ထွက်သူ' ? 'bg-black text-white' : ''} '} 
+                            ${item.condition === 'ကြိုတင်ခွင့်တိုင်သူ' ? 'bg-sky-100 border-l-4 border-green-600 text-black' : ''} '}
+                        p-2 cursor-pointer font-bold
                     `}>
                     ({index+1}) {item.Name}
                   </p>

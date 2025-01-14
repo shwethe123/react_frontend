@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Condition4() {
   const [gOutData, setGOutData] = useState([]);
-  const [selectedCondition, setSelectedCondition] = useState("condition4"); // Change this as needed
+  const [selectedCondition, setSelectedCondition] = useState("ခွင့်ရက်ရှည်"); // Change this as needed
 
   useEffect(() => {
     const fetchLocoData = async () => {
@@ -15,6 +15,7 @@ export default function Condition4() {
           car_order,
           chack,
           response_g,
+          order_in_one,
           order_in_two,
           outjuty,
           response_sale_in,
@@ -35,29 +36,30 @@ export default function Condition4() {
           Sale_out3,
           ] = await Promise.all([
             // api တွေ
-            fetch('https://dashboard-yfuz.onrender.com/accounting'),
-            fetch('https://dashboard-yfuz.onrender.com/audit'),
-            fetch('https://dashboard-yfuz.onrender.com/car_order'),
-            fetch('https://dashboard-yfuz.onrender.com/chack'),
-            fetch('https://dashboard-yfuz.onrender.com/dashboard'),
-            fetch('https://dashboard-yfuz.onrender.com/order_in_two'),
-            fetch('https://dashboard-yfuz.onrender.com/outjuty'),
-            fetch('https://dashboard-yfuz.onrender.com/sales_in'),
-            fetch('https://dashboard-yfuz.onrender.com/sale_out'),
-            fetch('https://dashboard-yfuz.onrender.com/cashier_two'),
-            fetch('https://dashboard-yfuz.onrender.com/cargo_two'),
-            fetch('https://dashboard-yfuz.onrender.com/carOrder_two'),
-            fetch('https://dashboard-yfuz.onrender.com/gout_two'),
-            fetch('https://dashboard-yfuz.onrender.com/orderIn_two'),
-            fetch('https://dashboard-yfuz.onrender.com/salesIn_two'),
-            fetch('https://dashboard-yfuz.onrender.com/saleOut_two'),
-            fetch('https://dashboard-yfuz.onrender.com/cashier_three'),
-            fetch('https://dashboard-yfuz.onrender.com/cargo_three'),
-            fetch('https://dashboard-yfuz.onrender.com/carOrder_three'),
-            fetch('https://dashboard-yfuz.onrender.com/gout_three'),
-            fetch('https://dashboard-yfuz.onrender.com/orderIn_three'),
-            fetch('https://dashboard-yfuz.onrender.com/salesIn_three'),
-            fetch('https://dashboard-yfuz.onrender.com/saleOut_three')
+            fetch('https://dashboard-yfuz.onrender.com/api/accounting'),
+            fetch('https://dashboard-yfuz.onrender.com/api/audit'),
+            fetch('https://dashboard-yfuz.onrender.com/api/car_order'),
+            fetch('https://dashboard-yfuz.onrender.com/api/chack'),
+            fetch('https://dashboard-yfuz.onrender.com/api/dashboard'),
+            fetch('https://dashboard-yfuz.onrender.com/api/order_in'),
+            fetch('https://dashboard-yfuz.onrender.com/api/order_in_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/outjuty'),
+            fetch('https://dashboard-yfuz.onrender.com/api/sales_in'),
+            fetch('https://dashboard-yfuz.onrender.com/api/sale_out'),
+            fetch('https://dashboard-yfuz.onrender.com/api/cashier_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/cargo_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/carOrder_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/gout_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/orderIn_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/salesIn_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/saleOut_two'),
+            fetch('https://dashboard-yfuz.onrender.com/api/cashier_three'),
+            fetch('https://dashboard-yfuz.onrender.com/api/cargo_three'),
+            fetch('https://dashboard-yfuz.onrender.com/api/carOrder_three'),
+            fetch('https://dashboard-yfuz.onrender.com/api/gout_three'),
+            fetch('https://dashboard-yfuz.onrender.com/api/orderIn_three'),
+            fetch('https://dashboard-yfuz.onrender.com/api/salesIn_three'),
+            fetch('https://dashboard-yfuz.onrender.com/api/saleOut_three')
         ]);
 
         // Check if the responses are successful
@@ -79,6 +81,7 @@ export default function Condition4() {
         const data_car_order = await car_order.json();
         const data_chack = await chack.json();
         const data_g = await response_g.json();
+        const data_order_in_one = await order_in_one.json();
         const data_order_in_two = await order_in_two.json();
         const data_outjuty = await outjuty.json();
         const data_sale_in = await response_sale_in.json();
@@ -103,7 +106,7 @@ export default function Condition4() {
 
         const combinedData = [
           ...data_accouting, ...data_audit, ...data_car_order, ...data_chack,
-          ...data_g, ...data_order_in_two, ...data_outjuty,
+          ...data_g, ...data_order_in_one, ...data_order_in_two, ...data_outjuty,
           ...data_sale_in, ...data_sale_out, ...data_cashier_two, ...data_car_go2,
           ...data_Car_order2, ...data_G_out2, ...data_Order_in2, ...data_sale_in2,
           ...data_Sale_out2, ...data_Accounting3, ...data_Car_go3, ...data_Car_order3,

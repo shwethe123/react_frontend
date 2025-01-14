@@ -33,9 +33,9 @@ export default function Gout2Table({ getloca2 }) {
                   <span
                     className={`flex justify-center w-14 rounded-full py-1 ${
                       item.score <= 10
-                        ? "bg-green-200 text-green-500"
+                        ? "bg-green-100 text-green-500"
                         : item.score >= 11 && item.score <= 40
-                        ? "bg-yellow-200 text-orange-400"
+                        ? "bg-yellow-100 text-orange-400"
                         : item.score >= 41 && item.score <= 80
                         ? "bg-red-200 text-red-500"
                         : "bg-red-500 text-white"

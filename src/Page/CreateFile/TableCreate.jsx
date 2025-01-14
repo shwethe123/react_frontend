@@ -134,7 +134,7 @@ export default function UserCreate() {
             <option value="Gထွက်">Gထွက်</option>
             <option value="လက်လီ">လက်လီ</option>
             <option value="လက်ကား">လက်ကား</option>
-            <option value="ကားအောင်">ကားအောင်</option>
+            <option value="ကားအောင်">ကားအော်ဒါ</option>
             <option value="အဝင်ပိုင်း">အဝင်ပိုင်း</option>
             <option value="ပစ္စည်းမှာ">ပစ္စည်းမှာ</option>
             <option value="စာရင်းကိုင်">စာရင်းကိုင်</option>
