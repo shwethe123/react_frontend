@@ -108,7 +108,7 @@ export default function Condition7() {
           ...data_accouting, ...data_audit, ...data_car_order, ...data_chack,
           ...data_g, ...data_order_in_one, ...data_order_in_two, ...data_outjuty,
           ...data_sale_in, ...data_sale_out, ...data_cashier_two, ...data_car_go2,
-          ...data_Car_order2, ...data_G_out2, ...data_Order_in2, ...data_sale_in2,
+          ...data_Car_order2, ...data_G_out2, ...data_sale_in2,
           ...data_Sale_out2, ...data_Accounting3, ...data_Car_go3, ...data_Car_order3,
           ...data_G_out3, ...data_Order_in3, ...data_Sale_in3, ...data_Sale_out3,
         ];

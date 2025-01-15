@@ -151,7 +151,7 @@ export default function Sale_out_edit() {
                             <p>{item.condition}</p>
                         </div>
                         <div className='flex justify-between space-y-6 items-center'>
-                            <p className='text-gray-400 font-semibold'>ဆိုင်တည်နေရာ</p>
+                            <p className='text-gray-400 font-semibold'>ဌာန နေရာ</p>
                             <p>{item.selection}</p>
                         </div>
                         <div className='flex-row space-y-6 border-t-2 mt-3 border-gray-500'>

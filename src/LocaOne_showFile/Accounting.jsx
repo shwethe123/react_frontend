@@ -17,7 +17,7 @@ export default function Accounting() {
   return (
     <>
         <div>
-            <h3 className="text-base font-semibold p-2 bg-gray-900 text-white mb-2 cursor-pointer">G-ထွက်</h3>
+            <h3 className="text-base font-semibold p-2 bg-gray-900 text-white mb-2 cursor-pointer">အကြွေးကိုင်</h3>
             {
                 accountings.length && (accountings.map((accounting, index) => (
                 <Link to={`/Account/Edit/${accounting._id}`} key={accounting._id}>
