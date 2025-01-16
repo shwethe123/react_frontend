@@ -12,7 +12,7 @@ export default function LocaAllTable() {
           fetch('https://dashboard-yfuz.onrender.com/api/sales_in'),
           fetch('https://dashboard-yfuz.onrender.com/api/sale_out'),
           fetch('https://dashboard-yfuz.onrender.com/api/car_order'),
-          fetch('https://dashboard-yfuz.onrender.com/api/dashboard'),
+          fetch('https://dashboard-yfuz.onrender.com/api/order_in'),
           fetch('https://dashboard-yfuz.onrender.com/api/order_in_two'),
           fetch('https://dashboard-yfuz.onrender.com/api/accounting'),
           fetch('https://dashboard-yfuz.onrender.com/api/audit'),
