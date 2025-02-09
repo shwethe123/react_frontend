@@ -138,7 +138,7 @@ export default function Condition9() {
 
   return (
     <div>
-        <div className='flex flex-col bg-green-300 mt-2 p-1 rounded-md'>
+        <div className='flex flex-col bg-sky-100 border-l-4 border-green-600 mt-2 p-1 rounded-md'>
               <p className='mb-2 box-decoration-clone text-xs text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-500 px-2 font-bold'>ကြိုတင်ခွင့် စာရင်း</p>
 
             {gOutData.length > 0 ? (

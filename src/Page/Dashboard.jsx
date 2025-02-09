@@ -111,7 +111,7 @@ export default function Dashboard() {
               </div>
               <div className="flex flex-col justify-between">
                 <Condition3 />
-                <Condition5 />
+                <Condition4 />
                 <Condition9 />
               </div>
               <div className="flex flex-col justify-between">
@@ -120,7 +120,7 @@ export default function Dashboard() {
                 </div>
                   <Condition7 />
                   <Condition8 />
-                  <Condition4 />
+                  <Condition5 />
               </div>
           </div>
 

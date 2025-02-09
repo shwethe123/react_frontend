@@ -138,17 +138,17 @@ export default function Condition() {
 
   return (
     <div>
-        <div className="flex flex-col bg-purple-100 p-1 rounded-md">
+        <div className="flex flex-col bg-orange-300 border-l-4 border-indigo-500 p-1 rounded-md">
           <p className='mb-2 box-decoration-clone text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-500 px-2 text-xs font-bold'>အလုပ်နောက်ကျစာရင်း</p>
           {gOutData.length > 0 ? (
             gOutData.map((item) => (
               <div className='flex justify-between items-center' key={item._id}>
               <div className="flex items-center">
                 <p className="bg-gradient-to-r from-fuchsia-600 to-blue-600 w-2 h-2 rounded-sm"></p>
-                <p className=" p-1 rounded-md text-gray-600 cursor-pointer text-xs">{item.Name}</p>
+                <p className=" p-1 rounded-md text-black cursor-pointer text-xs">{item.Name}</p>
               </div>
               <div >
-                <p className='text-xs text-gray-600'>{item.selection}</p>
+                <p className='text-xs text-black'>{item.selection}</p>
               </div>
             </div>
             ))

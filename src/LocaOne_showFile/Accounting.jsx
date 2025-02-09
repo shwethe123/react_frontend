@@ -21,19 +21,26 @@ export default function Accounting() {
             {
                 accountings.length && (accountings.map((accounting, index) => (
                 <Link to={`/Account/Edit/${accounting._id}`} key={accounting._id}>
-                    <p className={`
+                    <div className={`
                         rounded-md m-1
                             ${accounting.condition === 'အလုပ်နောက်ကျ' ? 'bg-orange-300 border-l-4 border-indigo-500 ...' : ''} 
                             ${accounting.condition === 'ခွင့်တစ်ပိုင်း' ? 'bg-green-200 border-l-4 border-green-600 ...' : ''} 
                             ${accounting.condition === 'ခွင့်တစ်ရက်' ? 'bg-green-500 border-l-4 border-green-800 ... text-white' : ''} 
-                            ${accounting.condition === 'ခွင့်ရက်ရှည်' ? 'bg-green-700 border-spacing-4 border-red-300... text-white' : ''} 
-                            ${accounting.condition === 'ခွင့်မဲ့' ? 'bg-red-500 text-white' : ''} 
-                            ${accounting.condition === 'ဖိုင်းအပြစ်ပေး' ? 'bg-red-400 border-l-4 border-red-600 ... text-white' : ''}
-                            ${accounting.condition === 'အလုပ်ထွက်မည့်သူ' ? 'bg-gray-700 border-l-4 border-black ... text-white' : ''}
-                            ${accounting.condition === 'အလုပ်ထွက်သူ' ? 'bg-black text-white' : ''} '} 
+                            ${accounting.condition === 'ခွင့်ရက်ရှည်' ? 'bg-green-600 border-l-4 border-black text-white' : ''} 
+                            ${accounting.condition === 'ခွင့်မဲ့' ? 'bg-red-400 border-l-4 border-red-600 text-white' : ''} 
+                            ${accounting.condition === 'ဖိုင်းအပြစ်ပေး' ? 'bg-pink-400 border-l-4 border-pink-700 ... text-white' : ''}
+                            ${accounting.condition === 'အလုပ်ထွက်မည့်သူ' ? 'bg-gray-400 border-l-4 border-black ... text-white' : ''}
+                            ${accounting.condition === 'အလုပ်ထွက်သူ' ? 'bg-black border-l-4 border-gray-400 text-white' : ''} '} 
                             ${accounting.condition === 'ကြိုတင်ခွင့်တိုင်သူ' ? 'bg-sky-100 border-l-4 border-green-600 text-black' : ''} '}
                         p-2 cursor-pointer font-bold
-                    `}>({index + 1}) {accounting.Name}</p>
+                    `}><div className='flex'>
+                            ({index + 1}) <p className='ml-1'>{accounting.Name}</p>
+                        </div>
+                        {accounting.condition !== 'Normal' && 
+                            <p className='ml-1 mt-2 border-l-4 border-r-4 border-red-600 rounded-full bg-orange-100 text-black p-2 shadow-xl'>
+                                {accounting.condition}
+                            </p>}
+                        </div>
                     </Link>
                 )))
             }

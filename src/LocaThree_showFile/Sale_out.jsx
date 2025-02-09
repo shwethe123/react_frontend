@@ -28,20 +28,26 @@ export default function Sale_out() {
         {
             Array.isArray(saleOut) && saleOut.length > 0 ? (saleOut.map((saleOutData, index) => (
                 <Link to={`/Sale_out3/Edit/${saleOutData._id}`} key={saleOutData._id}>
-                    <p className='text-red-500'>{error}</p>
-                    <p className={`
+                    <div className={`
                         rounded-md m-1
-                        ${saleOutData.condition === 'အလုပ်နောက်ကျ' ? 'bg-orange-300 border-l-4 border-indigo-500 ...' : ''} 
-                        ${saleOutData.condition === 'ခွင့်တစ်ပိုင်း' ? 'bg-green-200 border-l-4 border-green-600 ...' : ''} 
-                        ${saleOutData.condition === 'ခွင့်တစ်ရက်' ? 'bg-green-500 border-l-4 border-green-800 ... text-white' : ''} 
-                        ${saleOutData.condition === 'ခွင့်ရက်ရှည်' ? 'bg-green-700 border-spacing-4 border-red-300... text-white' : ''} 
-                        ${saleOutData.condition === 'ခွင့်မဲ့' ? 'bg-red-500 text-white' : ''} 
-                        ${saleOutData.condition === 'ဖိုင်းအပြစ်ပေး' ? 'bg-red-400 border-l-4 border-red-600 ... text-white' : ''}
-                        ${saleOutData.condition === 'အလုပ်ထွက်မည့်သူ' ? 'bg-gray-700 border-l-4 border-black ... text-white' : ''}
-                        ${saleOutData.condition === 'အလုပ်ထွက်သူ' ? 'bg-black text-white' : ''} '} 
-                        ${saleOutData.condition === 'ကြိုတင်ခွင့်တိုင်သူ' ? 'bg-sky-100 border-l-4 border-green-600 text-black' : ''} '}
+                            ${saleOutData.condition === 'အလုပ်နောက်ကျ' ? 'bg-orange-300 border-l-4 border-indigo-500 ...' : ''} 
+                            ${saleOutData.condition === 'ခွင့်တစ်ပိုင်း' ? 'bg-green-200 border-l-4 border-green-600 ...' : ''} 
+                            ${saleOutData.condition === 'ခွင့်တစ်ရက်' ? 'bg-green-500 border-l-4 border-green-800 ... text-white' : ''} 
+                            ${saleOutData.condition === 'ခွင့်ရက်ရှည်' ? 'bg-green-600 border-l-4 border-black text-white' : ''} 
+                            ${saleOutData.condition === 'ခွင့်မဲ့' ? 'bg-red-400 border-l-4 border-red-600 text-white' : ''} 
+                            ${saleOutData.condition === 'ဖိုင်းအပြစ်ပေး' ? 'bg-pink-400 border-l-4 border-pink-700 ... text-white' : ''}
+                            ${saleOutData.condition === 'အလုပ်ထွက်မည့်သူ' ? 'bg-gray-400 border-l-4 border-black ... text-white' : ''}
+                            ${saleOutData.condition === 'အလုပ်ထွက်သူ' ? 'bg-black border-l-4 border-gray-400 text-white' : ''} '} 
+                            ${saleOutData.condition === 'ကြိုတင်ခွင့်တိုင်သူ' ? 'bg-sky-100 border-l-4 border-green-600 text-black' : ''} '}
                         p-2 cursor-pointer font-bold
-                    `}>({index + 1}) {saleOutData.Name}</p>
+                    `}><div className='flex'>
+                            ({index + 1}) <p className='ml-1'>{saleOutData.Name}</p>
+                        </div>
+                        {saleOutData.condition !== 'Normal' && 
+                            <p className='ml-1 mt-2 border-l-4 border-r-4 border-red-600 rounded-full bg-orange-100 text-black p-2 shadow-xl'>
+                            {saleOutData.condition}
+                            </p>}
+                        </div>
                 </Link>
             ))) : (
                 <p className='text-red-500'>!No Data</p>

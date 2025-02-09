@@ -71,14 +71,15 @@ export default function Loca2AllTable() {
                                 </td>
                                 <td className='cursor-pointer'>
                                     <div className='py-2 flex justify-center text-blue-600'>
-                                        <p className='flex justify-center items-center w-8 h-8 bg-sky-100 rounded-full'>{index2.length - 1+1}</p>
+                                        <p className='flex justify-center items-center w-8 h-8 bg-sky-100 rounded-full'>{index3.length - 1+1}</p>
                                     </div>
                                 </td>
                                 <td className='cursor-pointer'>
                                     <div className='py-2 flex justify-center text-blue-600'>
-                                        <p className='flex justify-center items-center w-8 h-8 bg-sky-100 rounded-full'>{index3.length - 1+1}</p>
+                                        <p className='flex justify-center items-center w-8 h-8 bg-sky-100 rounded-full'>{index2.length - 1+1}</p>
                                     </div>
                                 </td>
+
                                 <td className='cursor-pointer'>
                                     <div className='py-2 flex justify-center text-blue-600'>
                                         <p className='flex justify-center items-center w-8 h-8 bg-sky-100 rounded-full'>{index4.length - 1+1}</p>

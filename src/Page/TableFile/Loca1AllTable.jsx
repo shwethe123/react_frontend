@@ -36,8 +36,8 @@ export default function LocaAllTable() {
 
   const headers = [
     'Gထွက်',
-    'လက်လီ',
     'လက်ကား',
+    'လက်လီ',
     'ကားအော်ဒါ',
     'အဝင်',
     'ပစ္စည်းမှာ',
