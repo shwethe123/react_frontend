@@ -70,7 +70,7 @@ export default function OptionsVisible() {
             <li className="py-2 px-4 text-gray-700 cursor-pointer hover:bg-gray-200">Edit</li>
             </Link>
             <li onClick={openParmitModel} className="py-2 px-4 text-gray-700 cursor-pointer hover:bg-gray-200">
-              See More
+              အလုပ်ထွက်
             </li>
             <li onClick={toggleOptions} className="py-2 px-4 text-gray-700 cursor-pointer hover:bg-gray-200">
               Cancel
